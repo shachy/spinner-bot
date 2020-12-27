@@ -91,7 +91,7 @@ def main():
                 spin_4k()
 
     else:
-        print('The software has failed to detect your screen size.')
+        print('The software failed to detect your screen size.')
         
         screen_x = int(input("Type your screen's x size: "))
         screen_y = int(input("Type your screen's y size: "))

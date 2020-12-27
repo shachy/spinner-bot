@@ -49,6 +49,16 @@ def spin_4k():
     time.sleep(0.01)
 
 
+def spin_custom(x, y):
+    win32api.SetCursorPos((x, y - 100))
+    time.sleep(0.01)
+    win32api.SetCursorPos((x + 100, y))
+    time.sleep(0.01)
+    win32api.SetCursorPos((x, y + 100))
+    time.sleep(0.01)
+    win32api.SetCursorPos((x - 100, y))
+    time.sleep(0.01)
+
 def main():
     screen_size = pyautogui.size()
 
@@ -79,6 +89,20 @@ def main():
         while True:
             while keyboard.is_pressed('space'):
                 spin_4k()
+
+    else:
+        print('The software has failed to detect your screen size.')
+        
+        screen_x = int(input("Type your screen's x size: "))
+        screen_y = int(input("Type your screen's y size: "))
+        x_devide = int(screen_x / 2)
+        y_devide = int(screen_y / 2)
+        
+        print('--{}p detected--'.format(screen_y))
+        
+        while True:
+            while keyboard.is_pressed('space'):
+                spin_custom(x_devide, y_devide)
 
 
 main()

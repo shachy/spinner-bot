@@ -93,12 +93,11 @@ def main():
     else:
         print('The software failed to detect your screen size.')
         
-        screen_x = int(input("Type your screen's x size: "))
-        screen_y = int(input("Type your screen's y size: "))
-        x_devide = screen_x / 2
-        y_devide = screen_y / 2
+        screen_x = int(input("Type your screen's x size: ")) / 2
+        screen_y = int(input("Type your screen's y size: ")) / 2
+
         
-        print('--{}p detected--'.format(screen_y))
+        print('--{}p detected--'.format(screen_y * 2))
         
         while True:
             while keyboard.is_pressed('space'):

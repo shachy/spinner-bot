@@ -95,8 +95,8 @@ def main():
         
         screen_x = int(input("Type your screen's x size: "))
         screen_y = int(input("Type your screen's y size: "))
-        x_devide = int(screen_x / 2)
-        y_devide = int(screen_y / 2)
+        x_devide = screen_x / 2
+        y_devide = screen_y / 2
         
         print('--{}p detected--'.format(screen_y))
         

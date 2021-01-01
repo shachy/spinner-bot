@@ -96,12 +96,10 @@ def main():
         screen_x = int(input("Type your screen's x size: ")) / 2
         screen_y = int(input("Type your screen's y size: ")) / 2
 
-        
         print('--{}p detected--'.format(screen_y * 2))
-        
         while True:
             while keyboard.is_pressed('space'):
-                spin_custom(x_devide, y_devide)
+                spin_custom(screen_x, screen_y)
 
 
 main()

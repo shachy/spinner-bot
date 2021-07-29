@@ -22,7 +22,7 @@ def main():
     print('To spin just press space')
     while True:
         while keyboard.is_pressed('space'):
-            spin((screen_x)/2, (screen_y)/2)
+            spin(int(screen_x/2), int(screen_y/2))
 
 if __name__ == "__main__":
     main()

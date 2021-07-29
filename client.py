@@ -18,14 +18,11 @@ def spin(x, y):
 
 def main():
     screen_x, screen_y = pyautogui.size()
-    used_x = int(screen_x / 2)
-    used_y = int(screen_y / 2)
-    
     print(f'---{screen_y}p detected---')
     print('To spin just press space')
     while True:
         while keyboard.is_pressed('space'):
-            spin(used_x, used_y)
+            spin((screen_x)/2, (screen_y)/2)
 
-
-main()
+if __name__ == "__main__":
+    main()

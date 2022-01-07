@@ -1,9 +1,7 @@
 import time
-
 import pyautogui
 import keyboard
 import win32api
-
 
 def spin(x, y):
     win32api.SetCursorPos((x, y - 100))
